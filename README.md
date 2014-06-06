@@ -36,7 +36,7 @@ once it's stable If you see something wrong or you have something to add,
 feel free to open up an issue or submit a pull request. I'll take a look
 and we'll decide if it should be patched in.
 
-All contributions have to belicensed in the public domain like the rest of
-the wrapper.
+All contributions have to be licensed in the public domain like the rest
+of the wrapper.
 
 Changes to the C code don't belong here of course.
