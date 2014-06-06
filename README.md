@@ -37,7 +37,7 @@ wrapper I wrote around it is in the public domain.
 ### Contributing
 
 The wrapper is pretty simple, so hopefully it won't need many bug fixes
-once it's stable If you see something wrong or you have something to add,
+once it's stable. If you see something wrong or you have something to add,
 feel free to open up an issue or submit a pull request. I'll take a look
 and we'll decide if it should be patched in.
 
