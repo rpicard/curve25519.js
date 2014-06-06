@@ -20,9 +20,8 @@ curve25519.getSharedSecret(myPrivate, theirPublic);
 
 The implementation of curve25519 in this repo is from
 agl/curve25519-donna. If you'd like to compile the library yourself, there
-is a nice Make file that will run the commands. You need to have emcc --
-the emscripten compiler -- and uglifyjs in your path for it to do its
-thing.
+is a nice Make file that will run the commands. You need to have emcc (the
+emscripten compiler) and uglifyjs in your path for it to do its thing.
 
 ### License
 
