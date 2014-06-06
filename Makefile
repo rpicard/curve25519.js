@@ -5,3 +5,4 @@ all:
 	uglifyjs build/curve25519.js js/wrapper.js -o build/scripts.js
 	cp js/pre.js build/release.js
 	cat build/scripts.js >> build/release.js
+	rm build/curve25519.js build/scripts.js
