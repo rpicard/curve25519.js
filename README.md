@@ -23,6 +23,11 @@ agl/curve25519-donna. If you'd like to compile the library yourself, there
 is a nice Make file that will run the commands. You need to have emcc (the
 emscripten compiler) and uglifyjs in your path for it to do its thing.
 
+### Testing
+
+Testing is pretty simple right now. Open up test/test.html in a browser to
+see it at work.
+
 ### License
 
 The c/curve25519-donna.c file has its own license from Google. See the
