@@ -1,20 +1,6 @@
 var curve25519 = (function() {
     var exports = {};
 
-    function hexStringToByteArray(string) {
-
-        var a = [];
-        for (var i = 0; i < string.length; i += 2) {
-            a.push("0x" + string.substr(i, 2));
-        }
-
-        ba = new Uint8Array(32);
-
-        ba.set(a);
-
-        return ba;
-    }
-
     // Insert some bytes into the emscripten memory and return a pointer
     function _allocate(bytes) {
         var address = Module._malloc(bytes.length);
@@ -26,7 +12,7 @@ var curve25519 = (function() {
     * Expects: Uint8Array(32)
     * Returns: Uint8Array(32)
     */
-    function publicFromSecret (secret) {
+    function getPublicFromSecret (secret) {
         // Where to store the result
         publicKey_ptr = Module._malloc(32);
 
@@ -69,7 +55,7 @@ var curve25519 = (function() {
         return sharedKey_ptr;
     }
 
-    exports.publicFromSecret = publicFromSecret;
+    exports.getPublicFromSecret = getPublicFromSecret;
     exports.getSharedSecret = getSharedSecret;
 
     return exports;
