@@ -27,8 +27,7 @@ emscripten compiler) and uglifyjs in your path for it to do its thing.
 
 The c/curve25519-donna.c file has its own license from Google. See the
 comment in that file. That's where the meat of this comes from. The little
-wrapper I wrote around it to make it less of a pain to call into the
-emscripten realm is in the public domain.
+wrapper I wrote around it is in the public domain.
 
 ### Contributing
 
