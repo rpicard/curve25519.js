@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script type="text/javascript" src="../build/release.js"></script>
+    </head>
+    <body>
+        <script type="text/javascript">
+
+function injectBytes(bs, leftPadding) {
+    var p = leftPadding || 0;
+    var address = Module._malloc(bs.length + p);
+    Module.HEAPU8.set(bs, address + p);
+    for (var i = address; i < address + p; i++) {
+        Module.HEAPU8[i] = 0;
+    }
+    return address;
+}
+
+function hexStringToByteArray(string) {
+
+var a = [];
+
+for (var i = 0; i < string.length; i += 2) {
+    a.push("0x" + string.substr(i, 2));
+}
+
+ba = new Uint8Array(32);
+
+ba.set(a);
+
+return ba;
+
+}
+
+var pkey = Module._malloc(32);
+var secret = injectBytes(hexStringToByteArray("77076d0a7318a57d3c16c17251b26645df4c2f87ebc0992ab177fba51db92c2a"));
+console.log(secret);
+var basepoint = injectBytes(hexStringToByteArray("0900000000000000000000000000000000000000000000000000000000000000"));
+console.log(basepoint);
+
+Module._curve25519_donna(pkey, secret, basepoint);
+
+var result = new Uint8Array(32);
+result.set(Module.HEAPU8.subarray(pkey, pkey + 32));
+console.log(result);
+
+        </script>
+    </body>
