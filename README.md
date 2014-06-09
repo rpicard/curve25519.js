@@ -11,7 +11,7 @@ light wrapper around the compiled code from emscripten. There are two
 functions.
 
 ```js
-// A key is a 32 byte long Uint8Array
+// A key is a 32 byte Uint8Array
 curve25519.getPublicFromPrivate(privateKey);
 curve25519.getSharedSecret(myPrivate, theirPublic);
 ```
