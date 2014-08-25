@@ -1,5 +1,7 @@
 ## curve25519.js
 
+**WARNING: THIS CODE HAS NOT BEEN AUDITED. TIMING ATTACKS ARE ESPECIALLY OF CONCERN. YOU PROBABLY SHOULD NOT USE IT.**
+
 An emscripten compiled port of curve25519-donna, with a super light
 wrapper around it.
 
